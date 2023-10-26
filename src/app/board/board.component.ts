@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { square } from '../types/types.interface';
 
 @Component({
   selector: 'board',
@@ -6,7 +7,7 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./board.component.scss']
 })
 export class BoardComponent implements OnInit {
-  squares!: string[];
+  squares!: square[];
   xIsNext!: boolean;
   winner!: string | null;
 
@@ -27,7 +28,7 @@ export class BoardComponent implements OnInit {
   }
 
   get isComplete() {
-    return this.winner || !this.squares.some((x) => x === '');
+    return this.winner || !this.squares.some((x: square|'') => x === '');
   }
   
   makeMove(idx: number) {

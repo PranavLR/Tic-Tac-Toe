@@ -1,0 +1,1 @@
+export type square = "X" | "O";

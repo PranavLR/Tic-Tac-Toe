@@ -1,6 +1,6 @@
 import { Component, Input } from '@angular/core';
+import { square } from '../types/types.interface';
 
-// type XO = "X" | "O" | undefined;
 
 @Component({
   selector: 'square',
@@ -8,5 +8,5 @@ import { Component, Input } from '@angular/core';
   styleUrls: ['./square.component.scss']
 })
 export class SquareComponent {
-  @Input() value!: unknown ;
+  @Input() value!: square ;
 }
