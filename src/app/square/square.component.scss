@@ -1,0 +1,19 @@
+button {
+  width: 100%;
+  height: 100%;
+  border-radius: inherit;
+  font-size: clamp(3em, 20vw, 6em) !important;
+}
+
+.empty-color,
+.empty-color:active {
+  background-color: #A27EFE;
+}
+.x-color,
+.x-color:active {
+  background-color: #15de95;
+}
+.o-color,
+.o-color:active {
+  background-color: #0095ff;
+}

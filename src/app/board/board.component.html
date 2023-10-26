@@ -1,0 +1,20 @@
+<h1>Current Player: {{ isPlayer }} </h1>
+
+    <button class="btn btn-outline-danger" (click)="newGame()">Start new Game</button>
+
+    <h3 class="min-width" *ngIf="winner">
+        Player {{ winner }} won the game!
+    </h3>
+    <h3 class="min-width" *ngIf="isComplete && !winner">
+        Match Draw!
+    </h3>
+    
+<main class="main" 
+      [ngClass]="{ 'won': isComplete}">
+    <square class="square"
+        *ngFor="let val of squares; let i = index" 
+        [value]="val"
+        (click)="makeMove(i)"> 
+        {{val}}
+    </square>
+</main>

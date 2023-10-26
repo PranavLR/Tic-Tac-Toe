@@ -1,0 +1,31 @@
+
+.main {
+  display: grid;
+  grid-template-columns: repeat(3, clamp(100px, 30vw, 200px));
+  grid-template-rows: repeat(3, clamp(100px, 30vw, 200px));
+  grid-gap: 0px;
+}
+
+.square {
+  border: 1px gray solid;
+//   height: 200px;
+}
+
+.main {
+  position: relative;
+  width: fit-content;
+}
+
+.main.won::before {
+  content: "";
+  position: absolute;
+  background-color: rgba(0, 0, 0, 0.3);
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+}
+
+.min-width {
+  min-width: max-content;
+}
